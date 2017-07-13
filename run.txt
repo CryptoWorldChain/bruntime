@@ -1,0 +1,15 @@
+-DofwConf=conf/ofw.properties -Dlogback.configurationFile=conf/logback.xml
+
+
+start file:///Users/brew/Documents/eem/ifacs/svn/onight/oapi/build/libs/onight.tfw.oapi-2.0.0.jar
+
+
+start file:///Users/brew/Documents/KJ/MING/svn/onight/otransio/build/libs/onight.tfw.otransio-1.0.0.jar
+
+start file:///Users/brew/Documents/eem/ifacs/svn/onight/example/otrantest/build/libs/onight.tfw.otrantest-1.0.0.jar
+
+start file:///Users/brew/Documents/KJ/MING/svn/mgame/mauthlogin/build/libs/onight.mgame.mauthlogin-1.0.0.jar
+
+start file:///Users/brew/Documents/KJ/MING/svn/mgame/mauthlogin/build/libs/onight.mgame.mauthlogin-1.0.0.jar
+
+VLOGAUT00000J00
