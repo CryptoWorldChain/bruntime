@@ -8,3 +8,4 @@ rolling/
 .settings
 .DS_STORE
 .DS_Store
+conf/startup.properties
