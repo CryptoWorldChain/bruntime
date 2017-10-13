@@ -17,7 +17,7 @@
 		<file>./logs/app.log</file>
 
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>./rolling/backup/app-%d{yyyy-MM-dd}.%i.zip
+			<fileNamePattern>./logs/backup/app-%d{yyyy-MM-dd}.%i.zip
 			</fileNamePattern>
 			<timeBasedFileNamingAndTriggeringPolicy
 				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">

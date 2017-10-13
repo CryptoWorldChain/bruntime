@@ -48,7 +48,7 @@
 	<logger name="com.lambdaworks.redis.protocol" level="info">
 	</logger>
 	<logger name="com.lambdaworks.redis" level="info" />
-	<logger name="onight.zippo.oparam.etcd" level="info" />
+	<logger name="onight.zippo.oparam.etcd" level="debug" />
 		<logger name="mousio.etcd4j.transport" level="info" />
 	<logger name="onight.osgi.otransio.impl.ModuleDiscovery" level="info" />
 	<logger name="onight.osgi.otransio.nio" level="info">
