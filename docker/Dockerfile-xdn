@@ -1,0 +1,12 @@
+From jdk:1.7
+RUN echo 'export LC_ALL="en_US.UTF-8"' >> /etc/profile
+ADD bundle  /opt/bruntime/bundle
+ADD conf  /opt/bruntime/conf
+ADD modules /opt/bruntime/modules
+ADD sbin  /opt/bruntime/sbin
+ADD startup.sh /opt/bruntime/
+RUN rm /opt/bruntime/bundle/org.apache.felix.gogo*.jar /opt/bruntime/bundle/org.apache.felix.ipojo.gogo*.jar
+ADD fetcher /fclink/fetcher/fetcher
+RUN chmod +x /fclink/fetcher/fetcher
+CMD /fclink/fetcher/fetcher && sh /opt/bruntime/startup.sh && sleep 2s && tail -f /fclink/fetcher/fetcher.log /opt/bruntime/logs/*.log
+
