@@ -37,9 +37,9 @@
 
 	<logger name="org.eclipse.jetty" level="info">
 	</logger>
-	<logger name ="org.apache" level="FINEST"/>
+	<logger name ="org.apache" level="trace"/>
 	<logger name ="org.apache.commons.httpclient" level="trace"/>
-	<logger name ="httpclient.wire" level="debug"/>
+	<logger name ="httpclient.wire" level="trace"/>
 	<logger name ="httpclient.wire.content" level="trace"/>
 	<logger name="onight.osgi.otransio.ck" level="info">
 	</logger>
@@ -48,7 +48,7 @@
 	<logger name="com.lambdaworks.redis.protocol" level="info">
 	</logger>
 	<logger name="com.lambdaworks.redis" level="info" />
-	<logger name="onight.zippo.oparam.etcd" level="info" />
+	<logger name="onight.zippo.oparam.etcd" level="trace" />
 		<logger name="mousio.etcd4j.transport" level="info" />
 	<logger name="onight.osgi.otransio.impl.ModuleDiscovery" level="info" />
 	<logger name="onight.osgi.otransio.nio" level="info">
