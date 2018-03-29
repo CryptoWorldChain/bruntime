@@ -51,10 +51,10 @@
 	<logger name="onight.zippo.oparam.etcd" level="trace" />
 		<logger name="mousio.etcd4j.transport" level="info" />
 	<logger name="onight.osgi.otransio.impl.ModuleDiscovery" level="info" />
-	<logger name="onight.osgi.otransio.nio" level="info">
+	<logger name="onight.osgi.otransio.nio" level="debug">
 	</logger>
 	
-	<logger name="com.github.mauricio.async,io.netty" level="info" />
+	<logger name="com.github.mauricio.async,io.netty" level="debug" />
 	<logger name="com.datastax.driver.core" level="info">
 	</logger>
 </configuration>
