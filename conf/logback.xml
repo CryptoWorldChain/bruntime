@@ -3,7 +3,7 @@
 		<!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder 
 			by default -->
 		<encoder>
-			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{48}:%L [%X{peerip}:%X{pbname}:%X{smid}] - %msg%n
+			<pattern>%d{HH:mm:ss.SSS}:[%X{BCUID}]:[%thread]:%-5level:%logger{24}:%L:%X{MessageID}: %msg%n
 			</pattern>
 		</encoder>
 	</appender>
@@ -12,12 +12,12 @@
 	<appender name="RollingFile"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-			<level>WARN</level>
+			<level>debug</level>
 		</filter>
-		<file>./rolling/app.log</file>
+		<file>./logs/app.log</file>
 
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>./rolling/backup/app-%d{yyyy-MM-dd}.%i.zip
+			<fileNamePattern>./logs/backup/app-%d{yyyy-MM-dd}.%i.zip
 			</fileNamePattern>
 			<timeBasedFileNamingAndTriggeringPolicy
 				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
@@ -25,14 +25,14 @@
 			</timeBasedFileNamingAndTriggeringPolicy>
 		</rollingPolicy>
 		<encoder>
-			<pattern>%d{HH:mm:ss.SSS}:[%X{nid}]:[%thread] %-5level %logger{48} - %msg%n
+			<pattern>%d{HH:mm:ss.SSS}:[%X{BCUID}]:%-5level:%logger{24}:%L:%X{MessageID}: %msg%n
 			</pattern>
 		</encoder>
 	</appender>
 
 	<root level="DEBUG">
-		<appender-ref ref="STDOUT" />
-		<!-- <appender-ref ref="RollingFile"/> -->
+		<!--  appender-ref ref="STDOUT" /-->
+		<appender-ref ref="RollingFile"/>
 	</root>
 
 	<logger name="org.eclipse.jetty" level="info">
