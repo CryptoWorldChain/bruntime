@@ -10,3 +10,4 @@ rolling/
 .DS_Store
 conf/startup.properties
 odb.*
+logs

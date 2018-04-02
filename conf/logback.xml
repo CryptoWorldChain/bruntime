@@ -41,7 +41,7 @@
 	<logger name ="org.apache.commons.httpclient" level="trace"/>
 	<logger name ="httpclient.wire" level="trace"/>
 	<logger name ="httpclient.wire.content" level="trace"/>
-	<logger name="onight.osgi.otransio.ck" level="info">
+	<logger name="onight.osgi.otransio" level="info">
 	</logger>
 	<logger name="onight.tfw.orouter.impl.QueueConsumer" level="info" />
 	<logger name="org.eclipse.jetty" level="info" />
@@ -51,8 +51,11 @@
 	<logger name="onight.zippo.oparam.etcd" level="trace" />
 		<logger name="mousio.etcd4j.transport" level="info" />
 	<logger name="onight.osgi.otransio.impl.ModuleDiscovery" level="info" />
-	<logger name="onight.osgi.otransio.nio" level="debug">
-	</logger>
+	<logger name="onight.osgi.otransio.nio" level="info"/>
+	<logger name="org.fc.brewchain.p22p.tasks.CheckingHealthy" level="info"/>
+	<logger name="org.fc.brewchain.p22p.action.PZPHeatBeat" level="info"/>
+	<logger name="org.fc.brewchain.p22p.action.PZPHeatBeatService" level="info"/>
+		<logger name="org.fc.brewchain.p22p.core.MessageSender" level="info"/>
 	
 	<logger name="com.github.mauricio.async,io.netty" level="debug" />
 	<logger name="com.datastax.driver.core" level="info">
