@@ -1,13 +1,14 @@
-<configuration>
+<configuration scan="true">
 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
 		<!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder 
 			by default -->
 		<encoder>
-			<pattern>%d{HH:mm:ss.SSS}:[%X{BCUID}]:[%thread]:%-5level:%logger{24}:%L:%X{MessageID}: %msg%n
+			<pattern>%d{HH:mm:ss.SSS}:[%X{BCUID}]:[%thread]:%-5level:%logger{24}:%L:%X{MessageID}:
+				%msg%n
 			</pattern>
 		</encoder>
 	</appender>
-	
+
 	<!--系统日志 DEBUG级别日志 -->
 	<appender name="RollingFile"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
@@ -31,32 +32,34 @@
 	</appender>
 
 	<root level="DEBUG">
-		<!--  appender-ref ref="STDOUT" /-->
-		<appender-ref ref="RollingFile"/>
+		<!-- appender-ref ref="STDOUT" / -->
+		<appender-ref ref="RollingFile" />
 	</root>
 
 	<logger name="org.eclipse.jetty" level="info">
 	</logger>
-	<logger name ="org.apache" level="trace"/>
-	<logger name ="org.apache.commons.httpclient" level="trace"/>
-	<logger name ="httpclient.wire" level="trace"/>
-	<logger name ="httpclient.wire.content" level="trace"/>
-	<logger name="onight.osgi.otransio" level="info">
-	</logger>
+	<logger name="org.apache" level="trace" />
+	<logger name="org.apache.commons.httpclient" level="trace" />
+	<logger name="httpclient.wire" level="trace" />
+	<logger name="httpclient.wire.content" level="trace" />
+
 	<logger name="onight.tfw.orouter.impl.QueueConsumer" level="info" />
 	<logger name="org.eclipse.jetty" level="info" />
 	<logger name="com.lambdaworks.redis.protocol" level="info">
 	</logger>
 	<logger name="com.lambdaworks.redis" level="info" />
 	<logger name="onight.zippo.oparam.etcd" level="trace" />
-		<logger name="mousio.etcd4j.transport" level="info" />
+	<logger name="mousio.etcd4j.transport" level="info" />
+	<logger name="onight.osgi.otransio" level="info" />
 	<logger name="onight.osgi.otransio.impl.ModuleDiscovery" level="info" />
-	<logger name="onight.osgi.otransio.nio" level="info"/>
-	<logger name="org.fc.brewchain.p22p.tasks.CheckingHealthy" level="info"/>
-	<logger name="org.fc.brewchain.p22p.action.PZPHeatBeat" level="info"/>
-	<logger name="org.fc.brewchain.p22p.action.PZPHeatBeatService" level="info"/>
-		<logger name="org.fc.brewchain.p22p.core.MessageSender" level="info"/>
-	
+	<logger name="onight.osgi.otransio.nio" level="info" />
+	<logger name="org.fc.brewchain.p22p.tasks.CheckingHealthy"
+		level="info" />
+	<logger name="org.fc.brewchain.p22p.action.PZPHeatBeat" level="info" />
+	<logger name="org.fc.brewchain.p22p.action.PZPHeatBeatService"
+		level="info" />
+	<logger name="org.fc.brewchain.p22p.core.MessageSender" level="debug" />
+
 	<logger name="com.github.mauricio.async,io.netty" level="debug" />
 	<logger name="com.datastax.driver.core" level="info">
 	</logger>
