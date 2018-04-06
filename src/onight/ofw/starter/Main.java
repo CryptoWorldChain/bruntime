@@ -29,11 +29,10 @@ public class Main extends org.apache.felix.main.Main {
 	public static void main(String[] args) {
 		try {
 			String cachedir = "felix-cache";
-
 			deleteDir(new File(cachedir));
 			System.setProperty("ofwConf", "conf/ofw.properties");
 			System.setProperty("logback.configurationFile", "conf/logback.xml");
-
+			
 			List<String> arglist = new ArrayList<String>();
 			arglist.addAll(Arrays.asList(args));
 			arglist.add(cachedir);
