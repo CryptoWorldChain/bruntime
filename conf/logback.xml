@@ -3,7 +3,11 @@
 		<!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder 
 			by default --> 
 		<encoder>
+<<<<<<< HEAD
  			<pattern>%d{HH:mm:ss.SSS}:[%X{BCUID}]:%-5level:%X{MessageID}:%logger{24}:%L:%X{MessageID}: %msg%n
+=======
+			<pattern>%d{HH:mm:ss.SSS}:[%X{BCUID}]:[%thread]:%-5level:%logger{24}:%L:%X{MessageID}: %msg%n
+>>>>>>> f9dd95014388c501c281af0a13af83ac0200ff28
 			</pattern>
 		</encoder>  
 	</appender>
@@ -31,6 +35,7 @@
 		<!--  appender-ref ref="STDOUT" /-->
 		<appender-ref ref="RollingFile" />
 	</root> 
+
 	<logger name="org.eclipse.jetty" level="info">
 	</logger>
 	<logger name="org.apache" level="trace" />
