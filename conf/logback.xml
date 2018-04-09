@@ -27,8 +27,8 @@
 			</pattern> 
 		</encoder>
 	</appender>
-	<root level="DEBUG">
-		<!-- appender-ref ref="STDOUT" / -->
+	<root level="DEBUG">  
+		<!--  appender-ref ref="STDOUT" /-->
 		<appender-ref ref="RollingFile" />
 	</root> 
 	<logger name="org.eclipse.jetty" level="info">
