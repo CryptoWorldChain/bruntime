@@ -5,7 +5,7 @@
 		<encoder>
  			<pattern>%d{HH:mm:ss.SSS}:[%X{BCUID}]:%-5level:%X{MessageID}:%logger{24}:%L:%X{MessageID}: %msg%n
 			</pattern>
-		</encoder>  
+		</encoder>
 	</appender>
 	<!--系统日志 DEBUG级别日志 -->   
 	<appender name="RollingFile"
