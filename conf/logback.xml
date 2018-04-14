@@ -1,18 +1,16 @@
 <configuration scan="true" scanPeriod="5 seconds" >
 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-		<!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder 
-			by default --> 
 		<encoder>
  			<pattern>%d{HH:mm:ss.SSS}:[%X{BCUID}]:%-5level:%X{MessageID}:%logger{24}:%L:%X{MessageID}: %msg%n
-			</pattern>
-		</encoder>
+			</pattern> 
+		</encoder> 
 	</appender>
 	<!--系统日志 DEBUG级别日志 -->   
 	<appender name="RollingFile"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
 			<level>debug</level> 
-		</filter>  
+		</filter>
 		<file>./logs/app.${LOGROOT}.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<fileNamePattern>./logs/backup/app-%d{yyyy-MM-dd}.%i.zip
