@@ -44,6 +44,9 @@
 	<logger name="onight.zippo.oparam.etcd" level="trace" />  
 	<logger name="mousio.etcd4j.transport" level="info" /> 
 	<logger name="onight.osgi.otransio" level="info" />
+	<logger name="onight.tfw.ntrans.osgi" level="info" />
+	<logger name="onight.tfw.servlet" level="info" />
+	<logger name="onight.tfw.ojpa" level="info" />
 	<logger name="onight.osgi.otransio.impl.ModuleDiscovery" level="info" />
 	<logger name="onight.osgi.otransio.nio" level="info" />
 	<logger name="org.fc.brewchain.p22p.tasks.CheckingHealthy" level="debug" />
