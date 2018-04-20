@@ -5,7 +5,7 @@
 			</pattern> 
 		</encoder> 
 	</appender>
-	<!--系统日志 DEBUG级别日志 -->   
+	<!--系统日志 DEBUG级别日志 --> 
 	<appender name="RollingFile"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
