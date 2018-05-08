@@ -1,18 +1,16 @@
 <configuration scan="true" scanPeriod="5 seconds" >
 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-		<!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder 
-			by default --> 
 		<encoder>
  			<pattern>%d{HH:mm:ss.SSS}:[%X{BCUID}]:%-5level:%X{MessageID}:%logger{24}:%L:%X{MessageID}: %msg%n
-			</pattern>
-		</encoder>
+			</pattern> 
+		</encoder> 
 	</appender>
-	<!--系统日志 DEBUG级别日志 -->   
+	<!--系统日志 DEBUG级别日志 --> 
 	<appender name="RollingFile"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
 			<level>debug</level> 
-		</filter>  
+		</filter>
 		<file>./logs/app.${LOGROOT}.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<fileNamePattern>./logs/backup/app-%d{yyyy-MM-dd}.%i.zip
@@ -46,6 +44,9 @@
 	<logger name="onight.zippo.oparam.etcd" level="trace" />  
 	<logger name="mousio.etcd4j.transport" level="info" /> 
 	<logger name="onight.osgi.otransio" level="info" />
+	<logger name="onight.tfw.ntrans.osgi" level="info" />
+	<logger name="onight.tfw.servlet" level="info" />
+	<logger name="onight.tfw.ojpa" level="info" />
 	<logger name="onight.osgi.otransio.impl.ModuleDiscovery" level="info" />
 	<logger name="onight.osgi.otransio.nio" level="info" />
 	<logger name="org.fc.brewchain.p22p.tasks.CheckingHealthy" level="debug" />
