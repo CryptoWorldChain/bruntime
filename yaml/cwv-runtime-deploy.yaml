@@ -1,0 +1,31 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: cwv-runtime-deploy-beta
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: cwv-runtime-deploy-beta
+        tier: cwv-runtime-deploy-beta
+    spec:
+      containers:
+      - name: cwv-runtime-deploy-beta
+        image: hub.cwv.io/cwv/cwv-runtime-beta:v1.0.1
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        env:
+          #- name: GET_HOSTS_FROM
+          # value: dns
+          # If your cluster config does not include a dns service, then to
+          # instead access environment variables to find service host
+          # info, comment out the 'value: dns' line above, and uncomment the
+          # line below:
+          # value: env
+          - name: JAVA_OPTS
+            value: "-Dfile.encoding=UTF8"
+        ports:
+        - containerPort: 80
