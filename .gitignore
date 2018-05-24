@@ -11,3 +11,6 @@ rolling/
 conf/startup.properties
 odb.*
 logs
+yaml
+builddocker.sh
+build-browser-api.sh
