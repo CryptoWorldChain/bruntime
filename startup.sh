@@ -2,9 +2,9 @@
 export LC_ALL="en_US.UTF-8"
 
 echo disable all start level but level 5:opolicy
-sed  -i -e 's/^felix.auto.start./#felix.auto.start./g' -e 's/^#felix.auto.start.5/felix.auto.start.5/g' /opt/bruntime/conf/config.properties
-sed  -i -e 's/^felix.auto.start.3/d/g' /opt/bruntime/conf/config.properties
-sed  -i -e 's/^felix.auto.start.4/d/g' /opt/bruntime/conf/config.properties
+#sed  -i -e 's/^felix.auto.start./#felix.auto.start./g' -e 's/^#felix.auto.start.5/felix.auto.start.5/g' /opt/bruntime/conf/config.properties
+#sed  -i -e 's/^felix.auto.start.3/d/g' /opt/bruntime/conf/config.properties
+#sed  -i -e 's/^felix.auto.start.4/d/g' /opt/bruntime/conf/config.properties
 
 echo add bundles to config.properties
 
