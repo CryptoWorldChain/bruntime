@@ -7,6 +7,7 @@ if [ ! -n "$v" ]; then
 　　exit 1
 fi
 
+
 cd ~/Documents/java/bruntime
 echo "docker build starting..."
 cd ~/Documents/java/bruntime/modules
