@@ -9,7 +9,7 @@
 	<appender name="RollingFile"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-			<level>debug</level> 
+			<level>debug</level>
 		</filter>
 		<file>./logs/app.${LOGROOT}.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -17,12 +17,84 @@
 			</fileNamePattern>
 			<timeBasedFileNamingAndTriggeringPolicy
 				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-				<maxFileSize>100MB</maxFileSize>
+				<maxFileSize>1000MB</maxFileSize>
 			</timeBasedFileNamingAndTriggeringPolicy>
 		</rollingPolicy>
 		<encoder>
-			<pattern>%d{HH:mm:ss.SSS}:[%X{BCUID}]:%-5level:%X{MessageID}:%logger{24}:%L: %msg%n
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}:[%X{BCUID}]:%-5level:%X{MessageID}:%logger{24}:%L: %msg%n
 			</pattern> 
+		</encoder>
+	</appender>
+	<appender name="transio"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>debug</level>
+		</filter>
+		<file>./logs/transio.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>./logs/backup/transio-%d{yyyy-MM-dd}.%i.zip
+			</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>1024MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS}:[%X{BCUID}]:%-5level:%X{MessageID}:%logger{24}:%L:%msg%n</pattern>
+		</encoder>
+	</appender>
+	<appender name="pzp"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>debug</level>
+		</filter>
+		<file>./logs/pzp.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>./logs/backup/pzp-%d{yyyy-MM-dd}.%i.zip
+			</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>1024MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS}:[%X{BCUID}]:%-5level:%X{MessageID}:%logger{24}:%L:%msg%n</pattern>
+		</encoder>
+	</appender>
+	<appender name="raft"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>debug</level>
+		</filter>
+		<file>./logs/raft.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>./logs/backup/raft-%d{yyyy-MM-dd}.%i.zip
+			</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>1024MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS}:[%X{BCUID}]:%-5level:%X{MessageID}:%logger{24}:%L:%msg%n</pattern>
+		</encoder>
+	</appender>
+	<appender name="dpos"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>debug</level>
+		</filter>
+		<file>./logs/dpos.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>./logs/backup/dpos-%d{yyyy-MM-dd}.%i.zip
+			</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>1024MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS}:[%X{BCUID}]:%-5level:%X{MessageID}:%logger{24}:%L:%msg%n</pattern>
 		</encoder>
 	</appender>
 	<root level="DEBUG">  
@@ -43,7 +115,6 @@
 	</logger>
 	<logger name="onight.zippo.oparam.etcd" level="trace" />  
 	<logger name="mousio.etcd4j.transport" level="info" /> 
-	<logger name="onight.osgi.otransio" level="info" />
 	<logger name="onight.tfw.ntrans.osgi" level="info" />
 	<logger name="onight.tfw.servlet" level="info" />
 	<logger name="onight.tfw.ojpa" level="info" />
@@ -56,5 +127,17 @@
 	<logger name="org.fc.brewchain.p22p.core.MessageSender" level="debug" />
 	<logger name="com.github.mauricio.async,io.netty" level="debug" />
 	<logger name="com.datastax.driver.core" level="info">
+	<logger name="onight.osgi.otransio" level="debug">
+		<appender-ref ref="transio" />
+	</logger>
+	<logger name="org.fc.brewchain.p22p" level="debug">
+		<appender-ref ref="pzp" />
+	</logger>
+	<logger name="org.brewchain.raftnet" level="debug">
+		<appender-ref ref="raft" />
+	</logger>
+	<logger name="org.brewchain.dposblk" level="debug">
+		<appender-ref ref="dpos" />
+	</logger>
 	</logger>
 </configuration> 
