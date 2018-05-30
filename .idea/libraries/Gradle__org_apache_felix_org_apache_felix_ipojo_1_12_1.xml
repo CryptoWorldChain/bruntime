@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.felix:org.apache.felix.ipojo:1.12.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.felix/org.apache.felix.ipojo/1.12.1/63d0902d40e5607e5b322fc9da8867b145bcdad3/org.apache.felix.ipojo-1.12.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.felix/org.apache.felix.ipojo/1.12.1/8d120d58f56b7498f34898f765d74bb905c11efc/org.apache.felix.ipojo-1.12.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

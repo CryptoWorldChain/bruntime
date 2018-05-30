@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.osgi:org.osgi.annotation:6.0.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.osgi/org.osgi.annotation/6.0.0/8e60d5960532e492c70b507752f95a76a955bf1f/org.osgi.annotation-6.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.osgi/org.osgi.annotation/6.0.0/d7ebeed8c7afb937ddb4652d90517c8c05294ee0/org.osgi.annotation-6.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

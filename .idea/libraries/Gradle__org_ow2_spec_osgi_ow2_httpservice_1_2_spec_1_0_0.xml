@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.ow2.spec.osgi:ow2-httpservice-1.2-spec:1.0.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.spec.osgi/ow2-httpservice-1.2-spec/1.0.0/303f7e635915681d260a99e38acb6b0facb039f4/ow2-httpservice-1.2-spec-1.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.spec.osgi/ow2-httpservice-1.2-spec/1.0.0/89a5578b3bf99ed516cb9574bfb5adc57d0452d7/ow2-httpservice-1.2-spec-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
