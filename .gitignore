@@ -14,3 +14,4 @@ logs
 yaml
 builddocker.sh
 build-browser-api.sh
+.idea/

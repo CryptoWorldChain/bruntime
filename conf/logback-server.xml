@@ -11,7 +11,7 @@
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
 			<level>debug</level>
 		</filter>
-		<file>./logs/app.${LOGROOT}.log</file>
+		<file>./logs/app.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<fileNamePattern>./logs/backup/app-%d{yyyy-MM-dd}.%i.zip
 			</fileNamePattern>
