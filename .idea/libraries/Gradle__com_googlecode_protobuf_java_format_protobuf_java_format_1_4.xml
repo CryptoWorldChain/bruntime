@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Gradle: com.googlecode.protobuf-java-format:protobuf-java-format:1.4">
-    <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/com/googlecode/protobuf-java-format/protobuf-java-format/1.4/protobuf-java-format-1.4.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
