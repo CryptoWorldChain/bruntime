@@ -40,7 +40,7 @@
 			</timeBasedFileNamingAndTriggeringPolicy>
 		</rollingPolicy>
 		<encoder>
-			<pattern>%d{HH:mm:ss.SSS}:[%X{BCUID}]:%-5level:%X{MessageID}:%logger{24}:%L:%msg%n</pattern>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}:[%X{BCUID}]:%-5level:%X{MessageID}:%logger{24}:%L:%msg%n</pattern>
 		</encoder>
 	</appender>
 	<appender name="pzp"
@@ -58,7 +58,7 @@
 			</timeBasedFileNamingAndTriggeringPolicy>
 		</rollingPolicy>
 		<encoder>
-			<pattern>%d{HH:mm:ss.SSS}:[%X{BCUID}]:%-5level:%X{MessageID}:%logger{24}:%L:%msg%n</pattern>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}:[%X{BCUID}]:%-5level:%X{MessageID}:%logger{24}:%L:%msg%n</pattern>
 		</encoder>
 	</appender>
 	<appender name="raft"
@@ -76,7 +76,7 @@
 			</timeBasedFileNamingAndTriggeringPolicy>
 		</rollingPolicy>
 		<encoder>
-			<pattern>%d{HH:mm:ss.SSS}:[%X{BCUID}]:%-5level:%X{MessageID}:%logger{24}:%L:%msg%n</pattern>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}:[%X{BCUID}]:%-5level:%X{MessageID}:%logger{24}:%L:%msg%n</pattern>
 		</encoder>
 	</appender>
 	<appender name="dpos"
@@ -94,7 +94,7 @@
 			</timeBasedFileNamingAndTriggeringPolicy>
 		</rollingPolicy>
 		<encoder>
-			<pattern>%d{HH:mm:ss.SSS}:[%X{BCUID}]:%-5level:%X{MessageID}:%logger{24}:%L:%msg%n</pattern>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}:[%X{BCUID}]:%-5level:%X{MessageID}:%logger{24}:%L:%msg%n</pattern>
 		</encoder>
 	</appender>
 	<root level="DEBUG">  
@@ -128,12 +128,16 @@
 	<logger name="com.github.mauricio.async,io.netty" level="debug" />
 	<logger name="com.datastax.driver.core" level="info">
 	<logger name="onight.osgi.otransio" level="debug">
+		<appender-ref ref="transio" />
 	</logger>
 	<logger name="org.fc.brewchain.p22p" level="debug">
+		<appender-ref ref="pzp" />
 	</logger>
 	<logger name="org.brewchain.raftnet" level="debug">
+		<appender-ref ref="raft" />
 	</logger>
 	<logger name="org.brewchain.dposblk" level="debug">
+		<appender-ref ref="dpos" />
 	</logger>
 	</logger>
 </configuration> 
