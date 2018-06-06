@@ -1,9 +1,11 @@
 build
+bruntime.iml
 bin
 .gradle
 gradle
 felix-cache
 classes
+.idea/
 rolling/
 .settings
 .DS_STORE
@@ -11,7 +13,9 @@ rolling/
 conf/startup.properties
 odb.*
 logs
+out
 yaml
 builddocker.sh
 build-browser-api.sh
-.idea/
+db
+
