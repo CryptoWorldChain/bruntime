@@ -97,8 +97,8 @@
 		</encoder>
 	</appender>
 	<root level="DEBUG">
-		<appender-ref ref="STDOUT" />
-		<!--<appender-ref ref="RollingFile" />-->
+		<!-- appender-ref ref="STDOUT" /-->
+		<appender-ref ref="RollingFile" />
 	</root>
 
 	<logger name="org.eclipse.jetty" level="info">
@@ -142,5 +142,18 @@
 	<logger name="org.fc.brewchain.p22p.core.MessageSender" level="debug" />
 	<logger name="com.github.mauricio.async,io.netty" level="debug" />
 	<logger name="com.datastax.driver.core" level="info">
+	</logger>
+	
+	<logger name="onight.osgi.otransio" level="debug">
+		<appender-ref ref="transio" />
+	</logger>
+	<logger name="org.fc.brewchain.p22p" level="debug">
+		<appender-ref ref="pzp" />
+	</logger>
+	<logger name="org.brewchain.raftnet" level="debug">
+		<appender-ref ref="raft" />
+	</logger>
+	<logger name="org.brewchain.dposblk" level="debug">
+		<appender-ref ref="dpos" />
 	</logger>
 </configuration> 

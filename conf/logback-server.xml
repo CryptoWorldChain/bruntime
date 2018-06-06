@@ -110,7 +110,7 @@
 	<logger name="httpclient.wire.content" level="trace" />
 
 	<logger name="onight.tfw.orouter.impl.QueueConsumer" level="info" />
-	<logger name="org.eclipse.jetty" level="info" />
+	<logger name="org.eclipse.jetty" level="info" /> 
 	<logger name="com.lambdaworks.redis.protocol" level="info">
 	</logger>
 	<logger name="onight.zippo.oparam.etcd" level="trace" />  
@@ -127,6 +127,7 @@
 	<logger name="org.fc.brewchain.p22p.core.MessageSender" level="debug" />
 	<logger name="com.github.mauricio.async,io.netty" level="debug" />
 	<logger name="com.datastax.driver.core" level="info">
+	</logger>
 	<logger name="onight.osgi.otransio" level="debug">
 		<appender-ref ref="transio" />
 	</logger>
@@ -139,5 +140,5 @@
 	<logger name="org.brewchain.dposblk" level="debug">
 		<appender-ref ref="dpos" />
 	</logger>
-	</logger>
+	
 </configuration> 
