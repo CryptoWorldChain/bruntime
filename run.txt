@@ -1,4 +1,6 @@
 -DofwConf=conf/ofw.properties -Dlogback.configurationFile=conf/logback.xml
+-DofwConf=conf/ofw.properties -Dlogback.configurationFile=conf/logback.xml
+-DofwConf=conf/ofw.properties -Dlogback.configurationFile=conf/logback.xml
 
 
 start file:///Users/brew/Documents/eem/ifacs/svn/onight/oapi/build/libs/onight.tfw.oapi-2.0.0.jar
