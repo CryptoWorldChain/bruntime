@@ -143,7 +143,8 @@
 	<logger name="com.github.mauricio.async,io.netty" level="debug" />
 	<logger name="com.datastax.driver.core" level="info">
 	</logger>
-	
+	<logger name="org.fc.brewchain.p22p.node.Network" level="info" />
+	<logger name="org.brewchain.bcapi.exec" level="info" />
 	<logger name="onight.osgi.otransio" level="debug">
 		<appender-ref ref="transio" />
 	</logger>

@@ -126,6 +126,8 @@
 	<logger name="org.fc.brewchain.p22p.action.PZPHeatBeatService" level="debug" />
 	<logger name="org.fc.brewchain.p22p.core.MessageSender" level="debug" />
 	<logger name="com.github.mauricio.async,io.netty" level="debug" />
+	<logger name="org.fc.brewchain.p22p.node.Network" level="info" />
+	<logger name="org.brewchain.bcapi.exec" level="info" />
 	<logger name="com.datastax.driver.core" level="info">
 	</logger>
 	<logger name="onight.osgi.otransio" level="debug">
