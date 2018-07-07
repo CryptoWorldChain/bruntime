@@ -145,7 +145,7 @@
 	</logger>
 	<logger name="org.fc.brewchain.p22p.node.Network" level="info" />
 	<logger name="org.brewchain.bcapi.exec" level="info" />
-	<logger name="onight.osgi.otransio" level="debug">
+	<logger name="onight.osgi.otransio" level="info">
 		<appender-ref ref="transio" />
 	</logger>
 	<logger name="org.fc.brewchain.p22p" level="debug">

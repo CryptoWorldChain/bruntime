@@ -130,13 +130,13 @@
 	<logger name="org.brewchain.bcapi.exec" level="info" />
 	<logger name="com.datastax.driver.core" level="info">
 	</logger>
-	<logger name="onight.osgi.otransio" level="debug">
+	<logger name="onight.osgi.otransio" level="info">
 		<appender-ref ref="transio" />
 	</logger>
 	<logger name="org.fc.brewchain.p22p" level="debug">
 		<appender-ref ref="pzp" />
 	</logger>
-	<logger name="org.brewchain.raftnet" level="debug">
+	<logger name="org.brewchain.raftnet" level="info">
 		<appender-ref ref="raft" />
 	</logger>
 	<logger name="org.brewchain.dposblk" level="debug">
