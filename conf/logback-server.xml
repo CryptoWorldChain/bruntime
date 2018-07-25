@@ -97,12 +97,51 @@
 			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}:[%X{BCUID}]:%-5level:%X{MessageID}:%logger{24}:%L:%msg%n</pattern>
 		</encoder>
 	</appender>
-	<root level="debug">  
+	<root level="error">  
 		<!--  appender-ref ref="STDOUT" /-->
 		<appender-ref ref="RollingFile" />
 	</root> 
+	<logger name="org.eclipse.jetty" level="error">
+        </logger>
+        <logger name="org.apache" level="error" />
+        <logger name="org.apache.commons.httpclient" level="error" />
+        <logger name="httpclient.wire" level="error" />
+        <logger name="httpclient.wire.content" level="error" />
 
-	<logger name="org.eclipse.jetty" level="info">
+        <logger name="onight.tfw.orouter.impl.QueueConsumer" level="error" />
+        <logger name="org.eclipse.jetty" level="error" />
+        <logger name="com.lambdaworks.redis.protocol" level="error">
+        </logger>
+        <logger name="onight.zippo.oparam.etcd" level="error" />
+        <logger name="mousio.etcd4j.transport" level="error" />
+        <logger name="onight.tfw.ntrans.osgi" level="error" />
+        <logger name="onight.tfw.servlet" level="error" />
+        <logger name="onight.tfw.ojpa" level="error" />
+        <logger name="onight.osgi.otransio.impl.ModuleDiscovery" level="error" />
+        <logger name="onight.osgi.otransio.nio" level="error" />
+        <logger name="org.fc.brewchain.p22p.tasks.CheckingHealthy" level="error" />
+        <logger name="org.fc.brewchain.p22p.action.PZPHeatBeat,org.fc.brewchain.p22p.core.MessageSender" level="error" />
+        <logger name="org.fc.brewchain.p22p.node.Network,org.fc.brewchain.p22p.pbft.StateStorage,org.fc.brewchain.p22p.pbft.DMVotingNodeBits" level="error" />
+        <logger name="org.fc.brewchain.p22p.action.PZPHeatBeatService" level="error" />
+        <logger name="org.fc.brewchain.p22p.core.MessageSender" level="error" />
+        <logger name="com.github.mauricio.async,io.netty" level="error" />
+        <logger name="org.fc.brewchain.p22p.node.Network" level="error" />
+        <logger name="org.brewchain.bcapi.exec" level="error" />
+        <logger name="com.datastax.driver.core" level="error">
+        </logger>
+        <logger name="onight.osgi.otransio" level="error">
+                <appender-ref ref="transio" />
+        </logger>
+        <logger name="org.fc.brewchain.p22p" level="error">
+                <appender-ref ref="pzp" />
+        </logger>
+        <logger name="org.brewchain.raftnet" level="error">
+                <appender-ref ref="raft" />
+        </logger>
+        <logger name="org.brewchain.dposblk" level="error">
+                <appender-ref ref="dpos" />
+        </logger>
+<!--	<logger name="org.eclipse.jetty" level="info">
 	</logger>
 	<logger name="org.apache" level="trace" />
 	<logger name="org.apache.commons.httpclient" level="trace" />
@@ -142,5 +181,5 @@
 	<logger name="org.brewchain.dposblk" level="debug">
 		<appender-ref ref="dpos" />
 	</logger>
-	
+-->	
 </configuration> 
