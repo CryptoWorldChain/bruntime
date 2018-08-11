@@ -97,10 +97,12 @@
 			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}:[%X{BCUID}]:%-5level:%X{MessageID}:%logger{24}:%L:%msg%n</pattern>
 		</encoder>
 	</appender>
-	<root level="error">  
+	<root level="debug">  
 		<!--  appender-ref ref="STDOUT" /-->
 		<appender-ref ref="RollingFile" />
 	</root> 
+<!--     
+
 	<logger name="org.eclipse.jetty" level="error">
         </logger>
         <logger name="org.apache" level="error" />
@@ -141,7 +143,9 @@
         <logger name="org.brewchain.dposblk" level="error">
                 <appender-ref ref="dpos" />
         </logger>
-<!--	<logger name="org.eclipse.jetty" level="info">
+
+-->
+	<logger name="org.eclipse.jetty" level="info">
 	</logger>
 	<logger name="org.apache" level="trace" />
 	<logger name="org.apache.commons.httpclient" level="trace" />
@@ -181,5 +185,4 @@
 	<logger name="org.brewchain.dposblk" level="debug">
 		<appender-ref ref="dpos" />
 	</logger>
--->	
 </configuration> 
