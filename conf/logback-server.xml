@@ -101,8 +101,7 @@
 		<!--  appender-ref ref="STDOUT" /-->
 		<appender-ref ref="RollingFile" />
 	</root> 
-<!--     
-
+<!-- 
 	<logger name="org.eclipse.jetty" level="error">
         </logger>
         <logger name="org.apache" level="error" />
@@ -143,7 +142,6 @@
         <logger name="org.brewchain.dposblk" level="error">
                 <appender-ref ref="dpos" />
         </logger>
-
 -->
 	<logger name="org.eclipse.jetty" level="info">
 	</logger>
@@ -186,3 +184,4 @@
 		<appender-ref ref="dpos" />
 	</logger>
 </configuration> 
+
