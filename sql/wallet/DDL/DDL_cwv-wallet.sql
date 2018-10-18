@@ -4,13 +4,13 @@ Navicat MySQL Data Transfer
 Source Server         : localhost
 Source Server Version : 50722
 Source Host           : localhost:3306
-Source Database       : cwv-wallet
+Source Database       : wallet_copy
 
 Target Server Type    : MYSQL
 Target Server Version : 50722
 File Encoding         : 65001
 
-Date: 2018-09-03 16:15:49
+Date: 2018-10-18 18:24:28
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -102,14 +102,14 @@ CREATE TABLE `cwv_wlt_parameter` (
 -- ----------------------------
 -- Records of cwv_wlt_parameter
 -- ----------------------------
-INSERT INTO `cwv_wlt_parameter` VALUES ('1', 'cwv', '1234567812345678', null, null, null, null, null);
+INSERT INTO `cwv_wlt_parameter` VALUES ('1', 'cwv', '7UE2u1tp407o5SL4', null, null, null, null, null);
 INSERT INTO `cwv_wlt_parameter` VALUES ('2', 'queryAddressURL', '/fbs/act/pbgac.do', null, null, null, null, null);
 INSERT INTO `cwv_wlt_parameter` VALUES ('3', 'createTransactionURL', '/fbs/txt/pbmtx.do', null, null, null, null, null);
 INSERT INTO `cwv_wlt_parameter` VALUES ('4', 'createContractURL', '/fbs/txt/pbmtx.do', null, null, null, null, null);
 INSERT INTO `cwv_wlt_parameter` VALUES ('5', 'queryTransaction', '/fbs/txt/pbgtx.do', null, null, null, null, null);
 INSERT INTO `cwv_wlt_parameter` VALUES ('6', 'queryLastBlock', '/fbs/bct/pbglb.do', null, null, null, null, null);
-INSERT INTO `cwv_wlt_parameter` VALUES ('7', 'chain_node_list', 'http://ta30.icwv.co:38000,http://ta30.icwv.co:38000,http://ta30.icwv.co:38000,http://ta30.icwv.co:38000,http://ta30.icwv.co:38000', null, null, null, null, null);
-INSERT INTO `cwv_wlt_parameter` VALUES ('8', 'time_out_second', '2', null, null, null, null, null);
+INSERT INTO `cwv_wlt_parameter` VALUES ('7', 'chain_node_list', 'http://jh9p.cwv.one', null, null, null, null, null);
+INSERT INTO `cwv_wlt_parameter` VALUES ('8', 'time_out_second', '5', null, null, null, null, null);
 
 -- ----------------------------
 -- Table structure for `cwv_wlt_tx`
