@@ -124,25 +124,25 @@
 		level="info" />
 	<logger
 		name="org.fc.brewchain.p22p.node.Network,org.fc.brewchain.p22p.pbft.StateStorage,org.fc.brewchain.p22p.pbft.DMVotingNodeBits"
-		level="debug" />
+		level="info" />
 	<logger name="org.fc.brewchain.p22p.action.PZPHeatBeatService"
 		level="info" />
-	<logger name="org.fc.brewchain.p22p.core.MessageSender" level="debug" />
-	<logger name="com.github.mauricio.async,io.netty" level="debug" />
+	<logger name="org.fc.brewchain.p22p.core.MessageSender" level="info" />
+	<logger name="com.github.mauricio.async,io.netty" level="info" />
 	<logger name="com.datastax.driver.core" level="info">
 	</logger>
 	<logger name="org.fc.brewchain.p22p.node.Network" level="info" />
 	<logger name="org.brewchain.bcapi.exec" level="info" />
-	<logger name="onight.osgi.otransio" level="debug">
+	<logger name="onight.osgi.otransio" level="info">
 		<appender-ref ref="transio" />
 	</logger>
-	<logger name="org.fc.brewchain.p22p" level="debug">
+	<logger name="org.fc.brewchain.p22p" level="info">
 		<appender-ref ref="pzp" />
 	</logger>
-	<logger name="org.brewchain.raftnet" level="debug">
+	<logger name="org.brewchain.raftnet" level="info">
 		<appender-ref ref="raft" />
 	</logger>
-	<logger name="org.brewchain.dposblk" level="debug">
+	<logger name="org.brewchain.dposblk" level="info">
 		<appender-ref ref="dpos" />
 	</logger>
 </configuration> 
