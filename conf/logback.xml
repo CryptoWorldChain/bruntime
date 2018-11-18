@@ -133,7 +133,13 @@
 	</logger>
 	<logger name="org.fc.brewchain.p22p.node.Network" level="info" />
 	<logger name="org.brewchain.bcapi.exec" level="info" />
+<<<<<<< HEAD
 	<logger name="onight.osgi.otransio" level="info">
+=======
+		<logger name="net.sf.ehcache" level="error" />
+	
+	<logger name="onight.osgi.otransio" level="debug">
+>>>>>>> master
 		<appender-ref ref="transio" />
 	</logger>
 	<logger name="org.fc.brewchain.p22p" level="info">
