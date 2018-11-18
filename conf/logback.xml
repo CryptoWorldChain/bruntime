@@ -9,7 +9,7 @@
 	<appender name="RollingFile"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-			<level>debug</level>
+			<level>info</level>
 		</filter>
 		<file>./logs/app.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -27,7 +27,7 @@
 	<appender name="transio"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-			<level>debug</level>
+			<level>info</level>
 		</filter>
 		<file>./logs/transio.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -45,7 +45,7 @@
 	<appender name="pzp"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-			<level>debug</level>
+			<level>info</level>
 		</filter>
 		<file>./logs/pzp.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -63,7 +63,7 @@
 	<appender name="raft"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-			<level>debug</level>
+			<level>info</level>
 		</filter>
 		<file>./logs/raft.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -81,7 +81,7 @@
 	<appender name="dpos"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-			<level>debug</level>
+			<level>info</level>
 		</filter>
 		<file>./logs/dpos.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -133,13 +133,7 @@
 	</logger>
 	<logger name="org.fc.brewchain.p22p.node.Network" level="info" />
 	<logger name="org.brewchain.bcapi.exec" level="info" />
-<<<<<<< HEAD
 	<logger name="onight.osgi.otransio" level="info">
-=======
-		<logger name="net.sf.ehcache" level="error" />
-	
-	<logger name="onight.osgi.otransio" level="debug">
->>>>>>> master
 		<appender-ref ref="transio" />
 	</logger>
 	<logger name="org.fc.brewchain.p22p" level="info">
