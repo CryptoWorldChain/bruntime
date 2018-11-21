@@ -9,7 +9,7 @@
 	<appender name="RollingFile"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-			<level>debug</level>
+			<level>info</level>
 		</filter>
 		<file>./logs/app.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -28,7 +28,7 @@
 	<appender name="transio"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-			<level>debug</level>
+			<level>info</level>
 		</filter>
 		<file>./logs/transio.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -46,7 +46,7 @@
 	<appender name="pzp"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-			<level>debug</level>
+			<level>info</level>
 		</filter>
 		<file>./logs/pzp.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -64,7 +64,7 @@
 	<appender name="raft"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-			<level>debug</level>
+			<level>info</level>
 		</filter>
 		<file>./logs/raft.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -82,7 +82,7 @@
 	<appender name="dpos"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-			<level>debug</level>
+			<level>info</level>
 		</filter>
 		<file>./logs/dpos.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -97,7 +97,7 @@
 			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}:[%X{BCUID}]:%-5level:%X{MessageID}:%logger{24}:%L:%msg%n</pattern>
 		</encoder>
 	</appender>
-	<root level="debug">  
+	<root level="info">  
 		<!--  appender-ref ref="STDOUT" /-->
 		<appender-ref ref="RollingFile" />
 	</root> 
@@ -145,28 +145,27 @@
 -->
 	<logger name="org.eclipse.jetty" level="info">
 	</logger>
-	<logger name="org.apache" level="trace" />
-	<logger name="org.apache.commons.httpclient" level="trace" />
-	<logger name="httpclient.wire" level="trace" />
-	<logger name="httpclient.wire.content" level="trace" />
-
+	<logger name="org.apache" level="info" />
+	<logger name="org.apache.commons.httpclient" level="info" />
+	<logger name="httpclient.wire" level="info" />
+	<logger name="httpclient.wire.content" level="info" />
 	<logger name="onight.tfw.orouter.impl.QueueConsumer" level="info" />
 	<logger name="org.eclipse.jetty" level="info" /> 
-	<logger name="com.lambdaworks.redis.protocol" level="info">
-	</logger>
-	<logger name="onight.zippo.oparam.etcd" level="trace" />  
+	<logger name="com.lambdaworks.redis.protocol" level="info"/>
+	<logger name="onight.zippo.oparam.etcd" level="info" />  
+	<logger name="org.fc.zippo.sender" level="info" />
 	<logger name="mousio.etcd4j.transport" level="info" /> 
 	<logger name="onight.tfw.ntrans.osgi" level="info" />
 	<logger name="onight.tfw.servlet" level="info" />
 	<logger name="onight.tfw.ojpa" level="info" />
 	<logger name="onight.osgi.otransio.impl.ModuleDiscovery" level="info" />
 	<logger name="onight.osgi.otransio.nio" level="debug" />
-	<logger name="org.fc.brewchain.p22p.tasks.CheckingHealthy" level="debug" />
-	<logger name="org.fc.brewchain.p22p.action.PZPHeatBeat,org.fc.brewchain.p22p.core.MessageSender" level="debug" />
-	<logger name="org.fc.brewchain.p22p.node.Network,org.fc.brewchain.p22p.pbft.StateStorage,org.fc.brewchain.p22p.pbft.DMVotingNodeBits" level="debug" />
-	<logger name="org.fc.brewchain.p22p.action.PZPHeatBeatService" level="debug" />
-	<logger name="org.fc.brewchain.p22p.core.MessageSender" level="debug" />
-	<logger name="com.github.mauricio.async,io.netty" level="debug" />
+	<logger name="org.fc.brewchain.p22p.tasks.CheckingHealthy" level="info" />
+	<logger name="org.fc.brewchain.p22p.action.PZPHeatBeat,org.fc.brewchain.p22p.core.MessageSender" level="info" />
+	<logger name="org.fc.brewchain.p22p.node.Network,org.fc.brewchain.p22p.pbft.StateStorage,org.fc.brewchain.p22p.pbft.DMVotingNodeBits" level="info" />
+	<logger name="org.fc.brewchain.p22p.action.PZPHeatBeatService" level="info" />
+	<logger name="org.fc.brewchain.p22p.core.MessageSender" level="info" />
+	<logger name="com.github.mauricio.async,io.netty" level="info" />
 	<logger name="org.fc.brewchain.p22p.node.Network" level="info" />
 	<logger name="org.brewchain.bcapi.exec" level="info" />
 	<logger name="net.sf.ehcache" level="error" />
@@ -175,13 +174,13 @@
 	<logger name="onight.osgi.otransio" level="info">
 		<appender-ref ref="transio" />
 	</logger>
-	<logger name="org.fc.brewchain.p22p" level="debug">
+	<logger name="org.fc.brewchain.p22p" level="info">
 		<appender-ref ref="pzp" />
 	</logger>
 	<logger name="org.brewchain.raftnet" level="info">
 		<appender-ref ref="raft" />
 	</logger>
-	<logger name="org.brewchain.dposblk" level="debug">
+	<logger name="org.brewchain.dposblk" level="info">
 		<appender-ref ref="dpos" />
 	</logger>
 </configuration> 
